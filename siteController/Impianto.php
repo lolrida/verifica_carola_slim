@@ -79,4 +79,42 @@ class Impianto
     }
 
 
+    public function findTemperatura()
+    {
+        $temperatura = array();
+        foreach($this->rilevatori as $ril)
+        {
+            if($ril->getId() == "temperatura")
+            {
+                array_push($temperatura,$ril);
+            }
+        }
+
+        return $temperatura;
+    }
+
+    public function findTemperaturaIdentificativo($codice)
+    {
+        foreach($this->rilevatori as $ril)
+        {
+            if($ril->getCodiceSeriale() == $codice)
+            {
+                return $ril;
+            }
+        }
+        return 1;
+    }
+
+    public function findMisurazioniIdentificativo($codice)
+    {
+        foreach($this->rilevatori as $ril)
+        {
+            if($ril->getCodiceSeriale() == $codice)
+            {
+                return $ril->getMisurazioni();
+            }
+        }
+        return 1;
+    }
+
 }

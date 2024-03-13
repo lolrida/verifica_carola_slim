@@ -33,7 +33,7 @@ class RilevatoreDiUmiditaController
     {
 
         $impianto = new Impianto();
-        $result = $impianto->findUmiditaIdentificativo($args[1]);
+        $result = $impianto->findUmiditaIdentificativo($args);
         var_dump($result);
         
 

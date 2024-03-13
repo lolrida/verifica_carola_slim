@@ -18,5 +18,10 @@ $app->get('/impianto', 'ImpiantoController:impianto');
 $app->get('/rilevatori_di_umidita', 'RilevatoreDiUmiditaController:Umidita');
 $app->get('/rilevatori_di_umidita/{identificativo}', 'RilevatoreDiUmiditaController:UmiditaIdentificativo'); // da chiedere
 $app->get('/rilevatori_di_umidita/{identificativo}/misurazioni', 'RilevatoreDiUmiditaController:MisurazioniIdentificativo');
+$app->get('/rilevatori_di_temperatura', 'ImpiantoDiTemperaturaController:Temperatura');
+$app->get('/rilevatori_di_temperatura/{identificativo}', 'ImpiantoDiTemperaturaController:TemperaturaIdentificativo');
+$app->get('/rilevatori_di_temperatura/{identificativo}/misurazioni', 'ImpiantoDiTemperaturaController:MisurazioniIdentificativo');
 
-$app->run();
+
+
+
